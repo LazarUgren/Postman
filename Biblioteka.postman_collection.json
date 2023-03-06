@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "6cc8c6d9-0807-4300-8cb3-fba28b77965a",
+		"name": "Biblioteka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25121145"
+	},
+	"item": [
+		{
+			"name": "Informacije o knjigama",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://demoqa.com/BookStore/v1/Books",
+					"protocol": "https",
+					"host": [
+						"demoqa",
+						"com"
+					],
+					"path": [
+						"BookStore",
+						"v1",
+						"Books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addListOfBooks",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic TGp1YmljYW5zdHZlbmE6MTIzUVdFcnR5ISEh",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"string\",\r\n  \"collectionOfIsbns\": [\r\n    {\r\n      \"isbn\": \"9781449325862\"\r\n      \r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demoqa.com/BookStore/v1/Books",
+					"protocol": "https",
+					"host": [
+						"demoqa",
+						"com"
+					],
+					"path": [
+						"BookStore",
+						"v1",
+						"Books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BrisanjeKnjiga",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/BookStore/BookStoreV1BooksDelete",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"BookStore",
+						"BookStoreV1BooksDelete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Informacije o knjizi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/BookStore/BookStoreV1BookGet",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"BookStore",
+						"BookStoreV1BookGet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BrisanjeKnjige",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"isbn\": \"string\",\r\n  \"userId\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/BookStore/BookStoreV1BookDelete",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"BookStore",
+						"BookStoreV1BookDelete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PromenaPodataka",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"string\",\r\n  \"isbn\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/BookStore/BookStoreV1BooksByISBNPut",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"BookStore",
+						"BookStoreV1BooksByISBNPut"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

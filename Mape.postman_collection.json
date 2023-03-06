@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "04b673ba-89a5-4f0d-89c7-8ac6aaaff79c",
+		"name": "Mape",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25121145"
+	},
+	"item": [
+		{
+			"name": "Add place",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"location\": {\r\n\t\t\"lat\": -38.383494,\r\n\t\t\"lng\": 33.427362\r\n\t},\r\n\t\"accuracy\": 50,\r\n\t\"name\": \"Drago d.o.o\",\r\n\t\"phone_number\": \"061 800 900 72\",\r\n\t\"address\": \"Krusevacka 29\",\r\n\t\"types\": [\r\n\t\t\"shoe park\",\r\n\t\t\"shop\"\r\n\t],\r\n\t\"website\": \"http://google.com\",\r\n\t\"language\": \"Serbian\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123",
+					"protocol": "https",
+					"host": [
+						"rahulshettyacademy",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"add",
+						"json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "qaclick123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get place",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=d84f7c2ba9a9891f6c3a2f2bcc83dc0d",
+					"protocol": "https",
+					"host": [
+						"rahulshettyacademy",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"get",
+						"json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "qaclick123"
+						},
+						{
+							"key": "place_id",
+							"value": "d84f7c2ba9a9891f6c3a2f2bcc83dc0d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update place",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"place_id\":\"d84f7c2ba9a9891f6c3a2f2bcc83dc0d\",\r\n    \"address\":\"string\",\r\n    \"key\":\"qaclick123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123&place id=d84f7c2ba9a9891f6c3a2f2bcc83dc0d",
+					"protocol": "https",
+					"host": [
+						"rahulshettyacademy",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"update",
+						"json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "qaclick123"
+						},
+						{
+							"key": "place id",
+							"value": "d84f7c2ba9a9891f6c3a2f2bcc83dc0d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delate place",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"place_id\":\"d84f7c2ba9a9891f6c3a2f2bcc83dc0d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123&place id=d84f7c2ba9a9891f6c3a2f2bcc83dc0d",
+					"protocol": "https",
+					"host": [
+						"rahulshettyacademy",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"delete",
+						"json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "qaclick123"
+						},
+						{
+							"key": "place id",
+							"value": "d84f7c2ba9a9891f6c3a2f2bcc83dc0d"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
